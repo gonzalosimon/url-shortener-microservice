@@ -1,7 +1,7 @@
 {
   "name": "url-shortener-microservice",
   "version": "0.0.1",
-  "description": "URL Shortener Microservice app using Node.js, Express.js, and MongoDB.",
+  "description": "URL Shortener Microservice app",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maribelduran/url-shortener-microservice.git"
+    "url": "https://github.com/gb-simon/url-shortener-microservice-master"
   },
-  "author": "Maribel Duran"
+  "author": "Simon"
 }
