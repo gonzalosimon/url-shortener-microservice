@@ -26,7 +26,7 @@ app.get('/', function(req, res){
   res.sendFile(process.cwd() + '/views/index.html');
 });
 
-app.post('/api/shorturl/new', urlHandler.addUrl);
+app.post('/api/shorturl/new', urlHandler.addUrl);``
   
 app.get('/api/shorturl/:shurl', urlHandler.processShortUrl);
 
