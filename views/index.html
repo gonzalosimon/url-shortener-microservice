@@ -1,48 +1,48 @@
 <!DOCTYPE html>
+
 <html>
 
    <head>
-     <title>URL Shortener Microservice </title>
-     <meta charset="utf-8">      
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-     <link href="/public/css/style.css" rel="stylesheet" type="text/css">
-     <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
+      <title>URL Shortener</title>
+      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="/public/style.css" rel="stylesheet" type="text/css">
    </head>
 
    <body>
       <div class="container">
-        <div class="well">
-         <h1 >URL Shortener Microservice;</h1>
-         <p>
-          This service accepts a URL as a parameter and will check whether it follows the valid  http://www.example.com format. 
-          If the URL is valid, it will return both the original URL and shortened URL in the JSON response. If it is not, 
-          the JSON response will contain an error instead. When you visit that shortened URL, it will redirect you to the original link.
-         </p>
-       
-         <h2>Example Creation Usage</h2>
-         <p>Pass the URL to path https://url-shortener-microsrvc.herokuapp.com/new/[URL]  as below:</p>
+        <h2>API Project: URL Shortener Microservice</h2>
+        <h3>User Story: </h3>
+        <ol>
+          <li>I can POST a URL to <code>[project_url]/api/shorturl/new</code> and I will receive a shortened URL in the JSON response.<br>Example : <code>{"original_url":"www.google.com","short_url":1}</code></li>
+          <li>If I pass an invalid URL that doesn't follow the <code>http(s)://www.example.com(/more/routes)</code> format, the JSON response will contain an error like <code>{"error":"invalid URL"}</code><br>
+          HINT: to be sure that the submitted url points to a valid site you can use the function <code>dns.lookup(host, cb)</code> from the <code>dns</code> core module.</li>
+          <li>When I visit the shortened URL, it will redirect me to my original link.</li>
+        </ol>
         
-         <h4>Valid URL example</h4>
-         <code>https://url-shortener-microsrvc.herokuapp.com/new/https://www.github.com</code>
-         <br>
+        <h3>Short URL Creation </h3>
+        <p>
+          example: <code>POST [project_url]/api/shorturl/new</code> - <code>https://www.google.com</code>
+        </p>
+        <form action="api/shorturl/new" method="POST">
+          <label for="url_input">URL to be shortened</label>
+          <input id="url_input" type="text" name="url" value="https://www.freecodecamp.org">
+          <input type="submit" value="POST URL">
+        </form>
+        <h3>Example Usage:</h3>
+        <a href="https://thread-paper.glitch.me/api/shorturl/3">
+          [this_project_url]/api/shorturl/3
+        </a>
 
-         <h2>Example Creation Output</h2>
-         <h3>Valid URL example JSON response</h3>
-         <code>{
-           <br>  original_url: "https://www.github.com", 
-           <br>
-                 shortened_url: "https://url-shortener-microsrvc.herokuapp.com/29183"
-           <br>
-           }
-         </code>
-
-         <h2>Usage:</h2>
-         <p>Visiting the shortened URL: <a href="https://url-shortener-microsrvc.herokuapp.com/29183" target="_blank">https://url-shortener-microsrvc.herokuapp.com/29183</a>
-          will redirect to: https://www.github.com</p>
-         
-        </div>
-       </div> 
+        <h3>Will Redirect to:</h3>
+        <p>https://www.freecodecamp.org/forum/</p>
+      </div>
+      <div class="footer">
+        <p>
+          by <a href="https://www.freecodecamp.org">freeCodeCamp</a>
+        </p>
+      </div>
    </body>
+
 
 </html>
