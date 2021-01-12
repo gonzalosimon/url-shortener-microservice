@@ -2,12 +2,13 @@
 [You can check the app by clicking here](https://cooked-kindhearted-seeder.glitch.me)
 
 #### Usage:
+If the user inserts for example "https://www.freecodecamp.org" this will generate a number.
 
 [this_project_url]/api/shorturl/[generated_number]
 
 #### Will redirect to:
 
-https://www.freecodecamp.org/forum/
+https://www.freecodecamp.org
 
 
 ### User Stories
